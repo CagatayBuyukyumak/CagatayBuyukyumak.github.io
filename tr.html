@@ -23,7 +23,8 @@
       "sameAs": [
         "https://www.linkedin.com/in/cagatay-buyukyumak/",
         "https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf",
-        "https://github.com/cagataybuyukyumak",
+        "https://github.com/CagatayBuyukyumak",
+        "https://orcid.org/0009-0001-5976-713X",
       ]
     }
     </script>
@@ -37,17 +38,17 @@
         /* SAF MİNİMALİZM: GÖZ YORMAYAN ANTRASİT VE KİRLİ BEYAZ */
         :root {
             /* KOYU MOD */
-            --bg-color: #2b2d31; /* Soft Antrasit (Göz yormaz) */
-            --text-color: #e8e8e6; /* Kırık Beyaz (Parlama yapmaz) */
+            --bg-color: #2b2d31; 
+            --text-color: #e8e8e6; 
             --nav-bg: rgba(43, 45, 49, 0.95);
-            --border-color: #4a4d54; /* Yumuşak Gri Çizgiler */
+            --border-color: #4a4d54; 
             --card-bg: rgba(255, 255, 255, 0.02);
         }
 
         .light-mode {
             /* AÇIK MOD */
-            --bg-color: #f4f4f2; /* Kirli/Sıcak Beyaz (Göz yormaz) */
-            --text-color: #2b2d31; /* Soft Antrasit */
+            --bg-color: #f4f4f2; 
+            --text-color: #2b2d31; 
             --nav-bg: rgba(244, 244, 242, 0.95);
             --border-color: #d1d1cf;
             --card-bg: rgba(0, 0, 0, 0.02);
@@ -87,7 +88,7 @@
             transition: all 0.5s;
         }
 
-        .nav-links { display: flex; gap: 40px; }
+        .nav-links { display: flex; gap: 30px; }
         .nav-links a {
             color: var(--text-color); text-decoration: none; font-weight: 400;
             font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 0.3s;
@@ -145,6 +146,21 @@
         .skill-list li { margin-bottom: 8px; position: relative; padding-left: 15px; }
         .skill-list li::before { content: "—"; position: absolute; left: 0; opacity: 0.5; }
 
+        /* ARAŞTIRMALAR (2 SÜTUNLU YAPI) EKLENDİ */
+        .featured-research {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
+            text-align: left; width: 100%; padding: 40px 0; border-bottom: 1px solid var(--border-color);
+        }
+        .research-text h3 { margin-bottom: 15px; }
+        
+        .research-img-placeholder {
+            width: 100%; height: 300px; background-color: var(--card-bg);
+            border: 1px dashed var(--border-color); border-radius: 4px;
+            display: flex; justify-content: center; align-items: center;
+            color: var(--text-color); font-size: 0.9rem; opacity: 0.6; overflow: hidden;
+        }
+        .research-img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
         /* SAF MONOKROM BUTONLAR */
         .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; width: 100%; }
         .btn {
@@ -162,11 +178,15 @@
         /* MOBİL UYUM */
         @media (max-width: 768px) {
             nav { padding: 15px; }
-            .nav-links { gap: 15px; }
+            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
             .nav-links a { font-size: 0.8rem; }
             .settings { position: static; margin-top: 10px; }
             h1 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
+            /* RESEARCH MOBİL DÜZENİ */
+            .featured-research { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+            .research-text { order: 2; }
+            .research-img-placeholder { order: 1; height: 250px; }
         }
     </style>
 </head>
@@ -177,6 +197,7 @@
             <a href="#home">Ana Sayfa</a>
             <a href="#now">Güncel</a>
             <a href="#expertise">Uzmanlık</a>
+            <a href="#research">Araştırmalar</a>
             <a href="#contact">İletişim</a>
         </div>
         <div class="settings">
@@ -201,6 +222,7 @@
         <h2>Şu An Ne Yapıyorum?</h2>
         <div class="now-list">
             <p><strong>Lisans Eğitimi:</strong> Bilkent Üniversitesi'nde 4. sınıf psikoloji eğitimime devam ediyor, bitirme projeme odaklanıyorum.</p>
+            <p><strong>Açık Bilim (Open Science):</strong> Bilişsel psikoloji araştırmalarında veri şeffaflığı sağlamak adına OSF (Open Science Framework) platformunu aktif olarak kullanıyorum.</p>
             <p><strong>Veri Analizi:</strong> Deneysel verileri daha verimli işleyebilmek için istatistiksel analiz yöntemleri ve yazılım (R/Python) becerilerimi geliştiriyorum.</p>
         </div>
     </section>
@@ -229,6 +251,27 @@
         </div>
     </section>
 
+    <!-- 4. ARAŞTIRMALAR (SEÇİLMİŞ ÇALIŞMALAR) -->
+    <section id="research" class="hidden">
+        <h2>Seçilmiş Çalışmalar</h2>
+        
+        <div class="featured-research">
+            <div class="research-text">
+                <h3>Çalışma Belleği ve Bilişsel Yük</h3>
+                <p><strong>Yayın:</strong> Bilkent Psikoloji Laboratuvarı</p>
+                <p>Artan bilişsel yükün çalışma belleği üzerindeki etkilerini analiz ettik. Çalışmada SPSS kullanarak verilerin varyans analizlerini gerçekleştirdim.</p>
+                <div class="btn-container" style="justify-content: flex-start; margin-top: 15px;">
+                    <a href="#" class="btn">Raporu Oku</a>
+                </div>
+            </div>
+            
+            <!-- RESİM ALANI -->
+            <div class="research-img-placeholder">
+                <!-- <img src="grafik.jpg" alt="Veri Analizi Çıktısı"> -->
+                [Buraya Analiz Grafiği veya Laboratuvar Fotoğrafı Gelecek]
+            </div>
+        </div>
+    </section>
 
     <!-- 5. İLETİŞİM -->
     <section id="contact" class="hidden">
