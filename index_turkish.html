@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çağatay Büyükyumak | Kişisel Portföy</title>
+    
+    <!-- SEO VE META ETİKETLERİ -->
+    <title>Çağatay Büyükyumak | Psikoloji & Hafıza Araştırmacısı</title>
+    <meta name="description" content="4. Sınıf Psikoloji lisans öğrencisi ve hafıza araştırmacısı Çağatay Büyükyumak'ın kişisel portföyü.">
+    <meta name="keywords" content="Çağatay Büyükyumak, Psikoloji, Hafıza Araştırmacısı, Klinik Psikoloji, Bilkent Üniversitesi, Portföy">
+    <meta name="author" content="Çağatay Büyükyumak">
+    
+    <!-- OPEN GRAPH ETİKETLERİ (LinkedIn, WhatsApp vb. link paylaşımlarında çıkacak kart için) -->
+    <meta property="og:title" content="Çağatay Büyükyumak | Kişisel Portföy">
+    <meta property="og:description" content="4. Sınıf Psikoloji lisans öğrencisi ve hafıza araştırmacısı.">
+    <meta property="og:image" content="profil.jpg">
+    <meta property="og:url" content="https://cagataybuyukyumak.github.io/">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
-        /* YENİ RENK PALETİ: ANTRASİT GRİ VE KİRLİ BEYAZ */
+        /* RENK PALETİ: ANTRASİT GRİ VE KİRLİ BEYAZ */
         :root {
-            --bg-color: #2b2d31; /* Antrasit Gri (Koyu Mod Arkaplan) */
-            --text-color: #f4f4f2; /* Kirli Beyaz (Koyu Mod Yazı) */
+            --bg-color: #2b2d31; 
+            --text-color: #f4f4f2; 
             --nav-bg: rgba(43, 45, 49, 0.95);
         }
 
         .light-mode {
-            --bg-color: #f4f4f2; /* Kirli Beyaz (Açık Mod Arkaplan) */
-            --text-color: #2b2d31; /* Antrasit Gri (Açık Mod Yazı) */
+            --bg-color: #f4f4f2; 
+            --text-color: #2b2d31; 
             --nav-bg: rgba(244, 244, 242, 0.95);
         }
 
@@ -32,6 +47,7 @@
             transition: background-color 0.5s, color 0.5s; 
         }
 
+        /* YUKARIDAKİ MENÜ (NAVBAR) */
         nav {
             position: fixed;
             top: 0;
@@ -46,16 +62,20 @@
             transition: background-color 0.5s;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
         .nav-links a {
             color: var(--text-color);
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
             transition: opacity 0.3s;
         }
 
         .nav-links a:hover {
-            opacity: 0.7; /* Renk yerine şeffaflıkla vurgu (Daha profesyonel) */
+            opacity: 0.7; 
         }
 
         .settings {
@@ -84,23 +104,25 @@
             color: var(--bg-color);
         }
 
+        /* BÖLÜM (SECTION) AYARLARI */
         section {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0 20px;
+            padding: 80px 20px 20px 20px; 
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            box-sizing: border-box;
         }
 
         h1 { font-size: 3rem; margin-bottom: 10px; color: var(--text-color); }
         h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--text-color); border-bottom: 2px solid var(--text-color); padding-bottom: 10px; }
         p { font-size: 1.2rem; margin-bottom: 20px; }
 
-        /* PROFİL FOTOĞRAFI TASARIMI */
+        /* PROFİL FOTOĞRAFI */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -115,7 +137,7 @@
             transform: scale(1.05);
         }
 
-        /* YAYINLAR/MAKALELER İÇİN KUTU TASARIMI */
+        /* ARAŞTIRMALAR/YAYINLAR İÇİN KUTU TASARIMI */
         .research-card {
             background: transparent;
             border: 1px solid var(--text-color);
@@ -124,18 +146,26 @@
             margin-bottom: 15px;
             text-align: left;
             width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* BUTONLAR VE MOBİL UYUMLULUK KAPLAMASI */
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            gap: 15px; 
+            margin-top: 10px;
         }
 
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            background-color: var(--text-color); /* Arkaplanla tam zıt */
-            color: var(--bg-color); /* Yazı rengi arkaplanla aynı */
+            background-color: var(--text-color); 
+            color: var(--bg-color); 
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            margin-top: 10px;
-            margin-right: 10px;
             transition: transform 0.3s, opacity 0.3s;
         }
 
@@ -147,12 +177,37 @@
         .hidden { opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
         .show { opacity: 1; transform: translateY(0); }
 
-        @media (max-width: 600px) {
-            nav { flex-direction: column; padding: 10px; }
-            .nav-links a { margin: 0 8px; font-size: 0.9rem; }
-            .settings { position: static; margin-top: 10px; }
+        /* MOBİL UYUMLULUK (TELEFONLAR & TABLETLER) */
+        @media (max-width: 768px) {
+            nav { 
+                flex-direction: column; 
+                padding: 15px; 
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .nav-links a { 
+                font-size: 1rem; 
+            }
+            .settings { 
+                position: static; 
+            }
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.8rem; }
+            p { font-size: 1rem; }
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            .btn {
+                width: 100%; 
+                text-align: center;
+                box-sizing: border-box;
+            }
+            .research-card h3 { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -172,21 +227,22 @@
     </nav>
 
     <section id="home" class="hidden">
-        <!-- FOTOĞRAF BURAYA GELECEK -->
         <img src="profil.jpg" alt="Çağatay Büyükyumak" class="profile-img">
-        
         <h1>Merhaba, Ben Çağatay</h1>
         <p>4. Sınıf Psikoloji Lisans Öğrencisi | Hafıza Araştırmacısı</p>
-        <a href="#about" class="btn">Beni Tanı</a>
+        <div class="btn-container">
+            <a href="#about" class="btn">Beni Tanı</a>
+        </div>
     </section>
 
     <section id="about" class="hidden">
         <h2>Hakkımda</h2>
         <p>Geleceğin klinik psikoloğu olarak, insan belleğinin işleyişi ve bilişsel süreçler üzerine çalışmalar yürütüyorum. Teknoloji ile psikolojinin kesişim noktalarına ilgi duyuyor ve kendi web sitemi kodluyorum.</p>
-        <a href="Özgeçmiş.pdf" class="btn" download>📄 Özgeçmişimi (CV) İndir</a>
+        <div class="btn-container">
+            <a href="Özgeçmiş.pdf" class="btn" download>📄 Özgeçmişimi (CV) İndir</a>
+        </div>
     </section>
 
-    <!-- YENİ EKLENEN ARAŞTIRMALAR/YAYINLAR BÖLÜMÜ -->
     <section id="research" class="hidden">
         <h2>Araştırmalar & Yayınlar</h2>
         
@@ -194,20 +250,20 @@
             <h3>Makale Başlığı veya Araştırma Konusu Buraya</h3>
             <p><strong>Yayınlanan Yer/Dergi:</strong> Dergi Adı </p>
             <p>Buraları henüz yazmadım.</p>
-            <!-- Makale linki (DOI veya PDF) -->
-            <a href="#" class="btn">Makaleyi Oku (PDF)</a>
+            <div class="btn-container" style="justify-content: flex-start;">
+                <a href="#" class="btn">Makaleyi Oku (PDF)</a>
+            </div>
         </div>
-        
     </section>
 
     <section id="contact" class="hidden">
         <h2>İletişim & Profiller</h2>
         <p>Akademik işbirlikleri ve iletişim için bana aşağıdaki platformlardan ulaşabilirsiniz.</p>
         
-        <div>
+        <div class="btn-container">
             <a href="mailto:cagataybuyukyumak@icloud.com" class="btn">E-Posta Gönder</a>
             <a href="https://www.linkedin.com/in/cagatay-buyukyumak/" class="btn" target="_blank">LinkedIn</a>
-            <a href="https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf" class="btn" target="_blank" >ResearchGate</a>
+            <a href="https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf" class="btn" target="_blank">ResearchGate</a>
             <a href="https://github.com/cagataybuyukyumak" class="btn" target="_blank">GitHub</a>
         </div>
     </section>
