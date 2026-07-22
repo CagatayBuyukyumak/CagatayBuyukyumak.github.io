@@ -8,6 +8,9 @@
     <meta name="description" content="4. Sınıf Psikoloji lisans öğrencisi ve hafıza araştırmacısı Çağatay Büyükyumak'ın akademik portföyü.">
     <meta name="author" content="Çağatay Büyükyumak">
 
+    <!-- FAVICON (TARAYICI SEKME İKONU) EKLENDİ -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <!-- GOOGLE SCHEMA MARKUP (Arama Motorları İçin) -->
     <script type="application/ld+json">
     {
@@ -24,7 +27,7 @@
         "https://www.linkedin.com/in/cagatay-buyukyumak/",
         "https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf",
         "https://github.com/CagatayBuyukyumak",
-        "https://orcid.org/0009-0001-5976-713X",
+        "https://orcid.org/0009-0001-5976-713X"
       ]
     }
     </script>
@@ -112,9 +115,9 @@
         
         #home { text-align: center; }
 
-        /* PROFİL FOTOĞRAFI */
+        /* PROFİL FOTOĞRAFI (BOYUTU 2/3 ORANINDA BÜYÜTÜLDÜ: 150px -> 250px) */
         .profile-img {
-            width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
+            width: 250px; height: 250px; border-radius: 50%; object-fit: cover;
             margin-bottom: 30px; border: 1px solid var(--border-color);
             filter: grayscale(100%); transition: all 0.5s ease;
         }
@@ -146,7 +149,7 @@
         .skill-list li { margin-bottom: 8px; position: relative; padding-left: 15px; }
         .skill-list li::before { content: "—"; position: absolute; left: 0; opacity: 0.5; }
 
-        /* ARAŞTIRMALAR (2 SÜTUNLU YAPI) EKLENDİ */
+        /* ARAŞTIRMALAR (2 SÜTUNLU YAPI) */
         .featured-research {
             display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
             text-align: left; width: 100%; padding: 40px 0; border-bottom: 1px solid var(--border-color);
@@ -198,6 +201,7 @@
             <a href="#now">Güncel</a>
             <a href="#expertise">Uzmanlık</a>
             <a href="#research">Araştırmalar</a>
+            <a href="#library">Kütüphane</a>
             <a href="#contact">İletişim</a>
         </div>
         <div class="settings">
@@ -208,7 +212,7 @@
 
     <!-- 1. GİRİŞ (HERO) -->
     <section id="home" class="hidden">
-        <img src="IMG_0484.jpeg" alt="Çağatay Büyükyumak" class="profile-img">
+        <img src="profil.jpg" alt="Çağatay Büyükyumak" class="profile-img">
         <h1>Bilişsel Süreçler & İnsan Belleği.</h1>
         <p style="margin: 0 auto;">Çağatay Büyükyumak. 4. Sınıf Psikoloji Lisans Öğrencisi. Klinik yaklaşım ve veri odaklı araştırmaların kesişiminde.</p>
         <div class="btn-container">
@@ -222,7 +226,6 @@
         <h2>Şu An Ne Yapıyorum?</h2>
         <div class="now-list">
             <p><strong>Lisans Eğitimi:</strong> Bilkent Üniversitesi'nde 4. sınıf psikoloji eğitimime devam ediyor, bitirme projeme odaklanıyorum.</p>
-            <p><strong>Açık Bilim (Open Science):</strong> Bilişsel psikoloji araştırmalarında veri şeffaflığı sağlamak adına OSF (Open Science Framework) platformunu aktif olarak kullanıyorum.</p>
             <p><strong>Veri Analizi:</strong> Deneysel verileri daha verimli işleyebilmek için istatistiksel analiz yöntemleri ve yazılım (R/Python) becerilerimi geliştiriyorum.</p>
         </div>
     </section>
@@ -273,7 +276,28 @@
         </div>
     </section>
 
-    <!-- 5. İLETİŞİM -->
+    <!-- 5. KÜTÜPHANE (READING LIST) -->
+    <section id="library" class="hidden">
+        <h2>Okuma Listesi</h2>
+        <p style="margin: 0 auto 30px auto; text-align: center;">Zihnimi besleyen ve akademik vizyonumu şekillendiren bazı temel eserler.</p>
+        
+        <div class="grid-container">
+            <div class="card">
+                <h4>Thinking, Fast and Slow</h4>
+                <p>Daniel Kahneman</p>
+                <br>
+                <small>İnsan zihninin karar alma mekanizmalarını ve bilişsel yanılgıları anlamak için temel referansım.</small>
+            </div>
+            <div class="card">
+                <h4>The Man Who Mistook His Wife for a Hat</h4>
+                <p>Oliver Sacks</p>
+                <br>
+                <small>Klinik nöropsikolojinin insan hikayeleriyle nasıl birleştiğini gösteren muazzam bir vaka derlemesi.</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. İLETİŞİM -->
     <section id="contact" class="hidden">
         <h2>Bağlantı Kurun</h2>
         <p style="margin: 0 auto; text-align: center;">Akademik işbirlikleri ve araştırma projeleri için iletişim ağım.</p>
