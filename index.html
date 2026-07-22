@@ -8,10 +8,16 @@
     <meta name="description" content="Academic portfolio of Cagatay Buyukyumak, a 4th-year Psychology undergraduate and memory researcher.">
     <meta name="author" content="Cagatay Buyukyumak">
 
-    <!-- FAVICON (TARAYICI SEKME İKONU) EKLENDİ -->
+    <!-- OPEN GRAPH META TAGS (Sosyal Medya Önizleme Kartları) -->
+    <meta property="og:title" content="Cagatay Buyukyumak | Psychology & Memory Researcher">
+    <meta property="og:description" content="Bilkent University Psychology undergraduate and memory researcher portfolio.">
+    <meta property="og:url" content="https://cagataybuyukyumak.github.io/">
+    <meta property="og:type" content="website">
+
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- GOOGLE SCHEMA MARKUP (For Search Engines) -->
+    <!-- GOOGLE SCHEMA MARKUP -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -27,20 +33,18 @@
         "https://www.linkedin.com/in/cagatay-buyukyumak/",
         "https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf",
         "https://github.com/CagatayBuyukyumak",
-        "https://orcid.org/0009-0001-5976-713X",
+        "https://orcid.org/0009-0001-5976-713X"
       ]
     }
     </script>
 
-    <!-- GOOGLE FONTS: Lora (Academic Headings) and Inter (Modern Text) -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* PURE MINIMALISM: SOFT ANTHRACITE AND OFF-WHITE */
         :root {
-            /* DARK MODE */
             --bg-color: #2b2d31; 
             --text-color: #e8e8e6; 
             --nav-bg: rgba(43, 45, 49, 0.95);
@@ -49,7 +53,6 @@
         }
 
         .light-mode {
-            /* LIGHT MODE */
             --bg-color: #f4f4f2; 
             --text-color: #2b2d31; 
             --nav-bg: rgba(244, 244, 242, 0.95);
@@ -68,7 +71,6 @@
             transition: background-color 0.6s ease, color 0.6s ease; 
         }
 
-        /* TYPOGRAPHY (LORA) */
         h1, h2, h3, h4 { 
             font-family: 'Lora', serif; 
             margin: 0; 
@@ -82,7 +84,6 @@
 
         p { font-size: 1.15rem; font-weight: 300; opacity: 0.85; max-width: 750px; margin-bottom: 30px; }
 
-        /* NAVBAR */
         nav {
             position: fixed; top: 0; width: 100%;
             background-color: var(--nav-bg); backdrop-filter: blur(10px);
@@ -106,16 +107,14 @@
         }
         .settings-btn:hover { opacity: 0.6; }
 
-        /* SECTION LAYOUT */
         section {
-            min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+            min-height: calc(100vh - 100px); display: flex; flex-direction: column; justify-content: center;
             align-items: center; padding: 120px 20px; max-width: 900px; 
             margin: 0 auto; text-align: left; box-sizing: border-box;
         }
         
         #home { text-align: center; }
 
-        /* PROFILE IMAGE (BOYUTU 2/3 ORANINDA BÜYÜTÜLDÜ: 150px -> 250px) */
         .profile-img {
             width: 250px; height: 250px; border-radius: 50%; object-fit: cover;
             margin-bottom: 30px; border: 1px solid var(--border-color);
@@ -123,14 +122,12 @@
         }
         .profile-img:hover { filter: grayscale(0%); transform: scale(1.02); }
 
-        /* THE NOW PAGE */
         .now-list { width: 100%; max-width: 750px; margin: 0 auto; }
         .now-list p {
             font-size: 1.1rem; border-left: 2px solid var(--border-color);
             padding-left: 20px; margin-bottom: 20px;
         }
 
-        /* GRID FOR SKILLS */
         .grid-container {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px; width: 100%; margin-top: 20px;
@@ -146,7 +143,6 @@
         .skill-list li { margin-bottom: 8px; position: relative; padding-left: 15px; }
         .skill-list li::before { content: "—"; position: absolute; left: 0; opacity: 0.5; }
 
-        /* FEATURED RESEARCH (2 COLUMNS) */
         .featured-research {
             display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
             text-align: left; width: 100%; padding: 40px 0; border-bottom: 1px solid var(--border-color);
@@ -159,9 +155,7 @@
             display: flex; justify-content: center; align-items: center;
             color: var(--text-color); font-size: 0.9rem; opacity: 0.6; overflow: hidden;
         }
-        .research-img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* PURE MONOCHROME BUTTONS */
         .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; width: 100%; }
         .btn {
             display: inline-block; padding: 12px 30px; background-color: transparent;
@@ -172,10 +166,19 @@
         .btn-solid { background-color: var(--text-color); color: var(--bg-color); border-color: var(--text-color); }
         .btn-solid:hover { background-color: transparent; color: var(--text-color); }
 
+        /* FOOTER TASARIMI */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-weight: 300;
+        }
+
         .hidden { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
         .show { opacity: 1; transform: translateY(0); }
 
-        /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
             nav { padding: 15px; }
             .nav-links { gap: 15px; }
@@ -183,7 +186,6 @@
             .settings { position: static; margin-top: 10px; }
             h1 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
-            /* RESEARCH MOBİL DÜZENİ */
             .featured-research { grid-template-columns: 1fr; gap: 30px; text-align: center; }
             .research-text { order: 2; }
             .research-img-placeholder { order: 1; height: 250px; }
@@ -206,9 +208,8 @@
         </div>
     </nav>
 
-    <!-- 1. HERO SECTION -->
     <section id="home" class="hidden">
-        <img src="profil.jpg" alt="Cagatay Buyukyumak" class="profile-img">
+        <img src="IMG_0484.jpeg" alt="Cagatay Buyukyumak" class="profile-img">
         <h1>Exploring the limits of human memory.</h1>
         <p style="margin: 0 auto;">Cagatay Buyukyumak. 4th-Year Psychology Undergraduate. At the intersection of clinical approaches and data-driven research.</p>
         <div class="btn-container">
@@ -217,7 +218,6 @@
         </div>
     </section>
 
-    <!-- 2. THE NOW PAGE -->
     <section id="now" class="hidden">
         <h2>Currently</h2>
         <div class="now-list">
@@ -227,7 +227,6 @@
         </div>
     </section>
 
-    <!-- 3. EXPERTISE & SKILLS -->
     <section id="expertise" class="hidden">
         <h2>Technical Skills</h2>
         <div class="grid-container">
@@ -251,10 +250,8 @@
         </div>
     </section>
 
-    <!-- 4. FEATURED WORK (RESEARCH) -->
     <section id="research" class="hidden">
         <h2>Featured Work</h2>
-        
         <div class="featured-research">
             <div class="research-text">
                 <h3>Working Memory and Cognitive Load</h3>
@@ -264,20 +261,15 @@
                     <a href="#" class="btn">Read Report</a>
                 </div>
             </div>
-            
-            <!-- IMAGE PLACEHOLDER -->
             <div class="research-img-placeholder">
-                <!-- <img src="grafik.jpg" alt="Data Analysis Output"> -->
                 [Analysis Graph or Lab Photo Goes Here]
             </div>
         </div>
     </section>
 
-    <!-- 5. CONTACT -->
     <section id="contact" class="hidden">
         <h2>Connect With Me</h2>
         <p style="margin: 0 auto; text-align: center;">My communication network for academic collaborations and research projects.</p>
-        
         <div class="btn-container">
             <a href="mailto:cagataybuyukyumak@icloud.com" class="btn btn-solid">Email</a>
             <a href="https://www.linkedin.com/in/cagatay-buyukyumak/" class="btn" target="_blank">LinkedIn</a>
@@ -287,6 +279,12 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <p style="margin: 0;">2026 Cagatay Buyukyumak — Last update: July 2026</p>
+        <p style="margin: 5px 0 0 0; font-size: 0.85rem;">Built with pure HTML/CSS & open source on GitHub Pages.</p>
+    </footer>
+
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -295,20 +293,16 @@
                 }
             });
         });
-        
         document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
 
         const themeBtn = document.getElementById('theme-btn');
         const currentTheme = localStorage.getItem('theme');
-        
         if (currentTheme === 'light') {
             document.body.classList.add('light-mode');
             themeBtn.innerText = 'DARK MODE';
         }
-
         themeBtn.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
-            
             if (document.body.classList.contains('light-mode')) {
                 localStorage.setItem('theme', 'light');
                 themeBtn.innerText = 'DARK MODE';
@@ -318,6 +312,5 @@
             }
         });
     </script>
-
 </body>
 </html>
