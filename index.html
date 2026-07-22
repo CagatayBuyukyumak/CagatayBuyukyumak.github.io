@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cagatay Buyukyumak | Personal Portfolio</title>
+    
+    <!-- SEO & META TAGS -->
+    <title>Cagatay Buyukyumak | Psychology & Memory Researcher</title>
+    <meta name="description" content="Personal portfolio of Cagatay Buyukyumak, a 4th-year Psychology undergraduate and memory researcher.">
+    <meta name="keywords" content="Cagatay Buyukyumak, Psychology, Memory Researcher, Clinical Psychology, Bilkent University, Portfolio">
+    <meta name="author" content="Cagatay Buyukyumak">
+    
+    <!-- OPEN GRAPH TAGS (For link sharing previews on LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:title" content="Cagatay Buyukyumak | Personal Portfolio">
+    <meta property="og:description" content="4th-year Psychology undergraduate and memory researcher.">
+    <meta property="og:image" content="profil.jpg">
+    <meta property="og:url" content="https://cagataybuyukyumak.github.io/">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
-        /* NEW COLOR PALETTE: ANTHRACITE GRAY AND OFF-WHITE */
+        /* COLOR PALETTE: ANTHRACITE GRAY AND OFF-WHITE */
         :root {
             --bg-color: #2b2d31; 
             --text-color: #f4f4f2; 
@@ -32,6 +47,7 @@
             transition: background-color 0.5s, color 0.5s; 
         }
 
+        /* NAVIGATION BAR */
         nav {
             position: fixed;
             top: 0;
@@ -46,10 +62,14 @@
             transition: background-color 0.5s;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
         .nav-links a {
             color: var(--text-color);
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
             transition: opacity 0.3s;
         }
@@ -84,23 +104,25 @@
             color: var(--bg-color);
         }
 
+        /* SECTION STYLING */
         section {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0 20px;
+            padding: 80px 20px 20px 20px; /* Top padding prevents nav bar overlap */
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            box-sizing: border-box;
         }
 
         h1 { font-size: 3rem; margin-bottom: 10px; color: var(--text-color); }
         h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--text-color); border-bottom: 2px solid var(--text-color); padding-bottom: 10px; }
         p { font-size: 1.2rem; margin-bottom: 20px; }
 
-        /* PROFILE PICTURE STYLING */
+        /* PROFILE PICTURE */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -115,7 +137,7 @@
             transform: scale(1.05);
         }
 
-        /* RESEARCH CARD STYLING */
+        /* RESEARCH CARD */
         .research-card {
             background: transparent;
             border: 1px solid var(--text-color);
@@ -124,6 +146,16 @@
             margin-bottom: 15px;
             text-align: left;
             width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* BUTTONS AND RESPONSIVE WRAPPERS */
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows buttons to wrap to the next line on small screens */
+            justify-content: center;
+            gap: 15px; /* Perfect spacing between buttons */
+            margin-top: 10px;
         }
 
         .btn {
@@ -134,8 +166,6 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            margin-top: 10px;
-            margin-right: 10px;
             transition: transform 0.3s, opacity 0.3s;
         }
 
@@ -147,12 +177,37 @@
         .hidden { opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
         .show { opacity: 1; transform: translateY(0); }
 
-        @media (max-width: 600px) {
-            nav { flex-direction: column; padding: 10px; }
-            .nav-links a { margin: 0 8px; font-size: 0.9rem; }
-            .settings { position: static; margin-top: 10px; }
+        /* MOBILE RESPONSIVENESS (SMARTPHONES & TABLETS) */
+        @media (max-width: 768px) {
+            nav { 
+                flex-direction: column; 
+                padding: 15px; 
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .nav-links a { 
+                font-size: 1rem; 
+            }
+            .settings { 
+                position: static; 
+            }
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.8rem; }
+            p { font-size: 1rem; }
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            .btn {
+                width: 100%; /* Buttons take full width on mobile for easy tapping */
+                text-align: center;
+                box-sizing: border-box;
+            }
+            .research-card h3 { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -172,21 +227,22 @@
     </nav>
 
     <section id="home" class="hidden">
-        <!-- PROFILE PICTURE HERE -->
         <img src="profil.jpg" alt="Cagatay Buyukyumak" class="profile-img">
-        
         <h1>Hello, I'm Cagatay</h1>
         <p>4th Year Psychology Undergraduate | Memory Researcher</p>
-        <a href="#about" class="btn">Get to Know Me</a>
+        <div class="btn-container">
+            <a href="#about" class="btn">Get to Know Me</a>
+        </div>
     </section>
 
     <section id="about" class="hidden">
         <h2>About Me</h2>
         <p>As a future clinical psychologist, I conduct research on the functioning of human memory and cognitive processes. I am interested in the intersection of technology and psychology, and I am coding my own website.</p>
-        <a href="cv.pdf" class="btn" download>📄 Download Resume (CV)</a>
+        <div class="btn-container">
+            <a href="cv.pdf" class="btn" download>📄 Download Resume (CV)</a>
+        </div>
     </section>
 
-    <!-- RESEARCH AND PUBLICATIONS SECTION -->
     <section id="research" class="hidden">
         <h2>Research & Publications</h2>
         
@@ -194,17 +250,17 @@
             <h3>Article Title or Research Topic Here</h3>
             <p><strong>Published In/Journal:</strong> Journal Name </p>
             <p>I haven't written this part yet.</p>
-            <!-- Article link (DOI or PDF) -->
-            <a href="#" class="btn">Read Article (PDF)</a>
+            <div class="btn-container" style="justify-content: flex-start;">
+                <a href="#" class="btn">Read Article (PDF)</a>
+            </div>
         </div>
-        
     </section>
 
     <section id="contact" class="hidden">
         <h2>Contact & Profiles</h2>
         <p>You can reach out to me for academic collaborations and communication via the platforms below.</p>
         
-        <div>
+        <div class="btn-container">
             <a href="mailto:cagataybuyukyumak@icloud.com" class="btn">Send Email</a>
             <a href="https://www.linkedin.com/in/cagatay-buyukyumak/" class="btn" target="_blank">LinkedIn</a>
             <a href="https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf" class="btn" target="_blank">ResearchGate</a>
