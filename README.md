@@ -1,1 +1,0 @@
-# CagatayBuyukyumak.github.io
