@@ -93,10 +93,12 @@
             transition: all 0.5s;
         }
 
+        /* YENİ FONT: Menü linkleriyle aynı (Inter, Büyük Harf) */
         .nav-brand {
             display: flex; align-items: center; gap: 10px;
             text-decoration: none; color: var(--text-color);
-            font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 500;
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 0.85rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase;
             transition: opacity 0.3s;
         }
         .nav-brand:hover { opacity: 0.7; }
@@ -133,27 +135,12 @@
         }
         .profile-img:hover { filter: grayscale(0%); transform: scale(1.02); }
 
-        .now-list { width: 100%; max-width: 750px; margin: 0 auto; }
-        .now-list p {
-            font-size: 1.05rem; border-left: 2px solid var(--border-color);
-            padding-left: 20px; margin-bottom: 20px;
-        }
-
-        .grid-container {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px; width: 100%; margin-top: 15px;
-        }
         .card {
             background-color: var(--card-bg); border: 1px solid var(--border-color);
             padding: 25px; text-align: left; border-radius: 4px; transition: background-color 0.3s;
         }
         .card:hover { background-color: transparent; }
-        .card h4 { font-size: 1.2rem; margin: 0 0 10px 0; }
         
-        .skill-list { list-style-type: none; padding: 0; margin: 15px 0 0 0; opacity: 0.85; }
-        .skill-list li { margin-bottom: 8px; position: relative; padding-left: 15px; font-size: 1rem; }
-        .skill-list li::before { content: "—"; position: absolute; left: 0; opacity: 0.5; }
-
         .featured-research {
             display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
             text-align: left; width: 100%; padding: 20px 0; border-bottom: 1px solid var(--border-color);
@@ -193,7 +180,7 @@
         /* KUSURSUZ MOBİL UYUM */
         @media (max-width: 768px) {
             nav { padding: 12px 15px; flex-wrap: wrap; }
-            .nav-brand span { display: inline; } /* Mobilde isim gizlenmesin istenirse açık kalır */
+            .nav-brand span { display: inline; } 
             .nav-links { 
                 order: 3; width: 100%; display: flex; justify-content: center; 
                 gap: 15px; margin-top: 10px; padding-top: 10px; 
@@ -220,9 +207,9 @@
         </a>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#now">Now</a>
-            <a href="#expertise">Skills</a>
+            <a href="#about">About Me</a>
             <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="settings">
@@ -231,65 +218,48 @@
         </div>
     </nav>
 
+    <!-- 1. HOME -->
     <section id="home" class="hidden">
         <img src="IMG_0484.jpeg" alt="Cagatay Buyukyumak" class="profile-img">
-        <h1> Curiosity for Human Memory.</h1>
-        <p style="margin: 0 auto;">Cagatay Buyukyumak. 4th-Year Psychology Undergraduate. Trying to become a scientist practitioner.</p>
+        <h1>The path for being a clinical psychologist scientist-practitioner.</h1>
+        <p style="margin: 0 auto;">Cagatay Buyukyumak. 4th-Year Psychology Undergraduate.</p>
         <div class="btn-container">
             <a href="CV.pdf" class="btn btn-solid" download>Download CV</a>
-            <a href="#now" class="btn">What I'm Doing Now</a>
         </div>
     </section>
 
-    <section id="now" class="hidden">
-        <h2>Currently</h2>
-        <div class="now-list">
-            <p><strong>Undergraduate Studies:</strong> Continuing my 4th-year psychology education at Bilkent University, currently focusing on my senior project.</p>
-            <p><strong>Data Analysis:</strong> Developing my statistical analysis methods and software skills (R/Python) to process experimental data more efficiently.</p>
-        </div>
+    <!-- 2. ABOUT ME (YENİ EKLENDİ) -->
+    <section id="about" class="hidden">
+        <h2>About Me</h2>
+        <p style="margin: 0 auto; text-align: center;">
+            [Continuing my 4th-year psychology education at Bilkent University, currently focusing on my senior project. ]
+        </p>
     </section>
 
-    <section id="expertise" class="hidden">
-        <h2>Technical Skills</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h4>Data Analysis & Statistics</h4>
-                <ul class="skill-list">
-                    <li>JASP (ANOVA, Regression)</li>
-                    <li>R (Advanced Analysis)</li>
-                    <li>Python (Basic Data Manipulation)</li>
-                    <li>HTML (Basic Web Development)</li>
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h4>Experimental Design</h4>
-                <ul class="skill-list">
-                    <li>PsychoPy</li>
-                    <li>Cognitive Test Batteries</li>
-                    <li>Research Methodology</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
+    <!-- 3. RESEARCH -->
     <section id="research" class="hidden">
         <h2>Featured Work</h2>
         <div class="featured-research">
             <div class="research-text">
-                <h3>Working Memory and Cognitive Load</h3>
-                <p><strong>Published:</strong> Bilkent Psychology Lab</p>
-                <p>We analyzed the effects of increasing cognitive load on working memory. In this study, I performed variance analyses of the data using SPSS.</p>
+                <h3>Involuntary Memory</h3>
+                <p>Under Construction</p>
+                <p>I will add a section here soon</p>
                 <div class="btn-container" style="justify-content: flex-start; margin-top: 15px;">
                     <a href="#" class="btn">Read Report</a>
                 </div>
             </div>
-            <div class="research-img-placeholder">
-                [Analysis Graph or Lab Photo Goes Here]
-            </div>
         </div>
     </section>
 
+    <!-- 4. PUBLICATIONS (YENİ EKLENDİ) -->
+    <section id="publications" class="hidden">
+        <h2>Publications</h2>
+        <div class="card" style="width: 100%; text-align: center; max-width: 750px; margin: 0 auto;">
+            <p style="margin: 0; opacity: 0.8;">[I haven't contributed any publications yet!]</p>
+        </div>
+    </section>
+
+    <!-- 5. CONTACT -->
     <section id="contact" class="hidden">
         <h2>Connect With Me</h2>
         <p style="margin: 0 auto; text-align: center;">My communication network for academic collaborations and research projects.</p>
@@ -302,9 +272,9 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (COPYRIGHT EKLENDİ) -->
     <footer>
-        <p style="margin: 0; font-weight: 400;">2026 Cagatay Buyukyumak. All rights reserved.</p>
+        <p style="margin: 0; font-weight: 400;">&copy; 2026 Cagatay Buyukyumak. All rights reserved.</p>
         <p style="margin: 6px 0 0 0; font-size: 0.7rem; opacity: 0.4;">Hosted on GitHub Pages</p>
     </footer>
 
