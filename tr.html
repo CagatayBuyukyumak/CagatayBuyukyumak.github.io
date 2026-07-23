@@ -18,9 +18,9 @@
     <meta property="og:url" content="https://cagataybuyukyumak.github.io/tr.html">
     <meta property="og:type" content="website">
 
-    <!-- FAVICON (Dinamik Geçiş İçin) -->
-    <link id="favicon" rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link id="apple-favicon" rel="apple-touch-icon" href="favicon.png">
+    <!-- FAVICON (Koyu mod varsayılan olduğu için favicon2.png yapıldı) -->
+    <link id="favicon" rel="icon" type="image/png" sizes="32x32" href="favicon2.png">
+    <link id="apple-favicon" rel="apple-touch-icon" href="favicon2.png">
 
     <!-- GOOGLE SCHEMA MARKUP -->
     <script type="application/ld+json">
@@ -188,7 +188,7 @@
             .nav-brand span { display: inline; } 
             .nav-links { 
                 position: relative; left: 0; transform: none; 
-                order: 3; width: 100%; display: flex; justify-content: center; flex-wrap: wrap; /* Taşmayı önler */
+                order: 3; width: 100%; display: flex; justify-content: center; flex-wrap: wrap; 
                 gap: 15px; margin-top: 12px; padding-top: 12px; 
                 border-top: 1px solid var(--border-color);
             }
@@ -196,7 +196,7 @@
             .settings { order: 2; }
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.8rem; }
-            section { padding: 130px 20px 40px 20px; } /* Menü büyüdüğü için alan eklendi */
+            section { padding: 130px 20px 40px 20px; } 
             #home { padding-top: 150px; }
             .profile-img { width: 160px; height: 160px; }
         }
@@ -206,7 +206,8 @@
 
     <nav>
         <a href="#home" class="nav-brand">
-            <img id="nav-logo" src="favicon.png" alt="Logo">
+            <!-- Varsayılan logo favicon2.png yapıldı -->
+            <img id="nav-logo" src="favicon2.png" alt="Logo">
             <span>Çağatay Büyükyumak</span>
         </a>
         <div class="nav-links">
@@ -236,7 +237,7 @@
     <section id="about" class="hidden">
         <h2>Hakkımda</h2>
         <p style="margin: 0 auto; text-align: center;">
-            Bilkent Üniversitesi Psikoloji bölümünde son sınıfımdayım. Şu anda bitirme projem üzerine çalışıyorum. Kendi websitemi GitHub pages üzerinden oluşturdum ve üzerinde çalışmaya devam ediyorum.
+            [Bilkent Üniversitesi Psikoloji bölümünde son sınıfımdayım. Şu anda bitirme projem üzerine çalışıyorum. Kendi websitemi GitHub pages üzerinden oluşturdum ve üzerinde çalışmaya devam ediyorum.]
         </p>
     </section>
 
@@ -298,13 +299,15 @@
         if (currentTheme === 'light') {
             document.body.classList.add('light-mode');
             themeBtn.innerText = 'KOYU';
-            navLogo.src = 'favicon2.png';
-            favicon.href = 'favicon2.png';
-            appleFavicon.href = 'favicon2.png';
-        } else {
+            // Açık modda favicon.png çalışır
             navLogo.src = 'favicon.png';
             favicon.href = 'favicon.png';
             appleFavicon.href = 'favicon.png';
+        } else {
+            // Koyu modda favicon2.png çalışır
+            navLogo.src = 'favicon2.png';
+            favicon.href = 'favicon2.png';
+            appleFavicon.href = 'favicon2.png';
         }
 
         themeBtn.addEventListener('click', () => {
@@ -312,15 +315,15 @@
             if (document.body.classList.contains('light-mode')) {
                 localStorage.setItem('theme', 'light');
                 themeBtn.innerText = 'KOYU';
-                navLogo.src = 'favicon2.png';
-                favicon.href = 'favicon2.png';
-                appleFavicon.href = 'favicon2.png';
-            } else {
-                localStorage.setItem('theme', 'dark');
-                themeBtn.innerText = 'AÇIK';
                 navLogo.src = 'favicon.png';
                 favicon.href = 'favicon.png';
                 appleFavicon.href = 'favicon.png';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeBtn.innerText = 'AÇIK';
+                navLogo.src = 'favicon2.png';
+                favicon.href = 'favicon2.png';
+                appleFavicon.href = 'favicon2.png';
             }
         });
     </script>
