@@ -14,8 +14,9 @@
     <meta property="og:url" content="https://cagataybuyukyumak.github.io/">
     <meta property="og:type" content="website">
 
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- FAVICON (Geliştirilmiş) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <!-- GOOGLE SCHEMA MARKUP -->
     <script type="application/ld+json">
@@ -84,7 +85,7 @@
 
         p { font-size: 1.1rem; font-weight: 300; opacity: 0.85; max-width: 750px; margin-bottom: 25px; }
 
-        /* NAVBAR & SOL ÜST MARKA */
+        /* NAVBAR */
         nav {
             position: fixed; top: 0; width: 100%;
             background-color: var(--nav-bg); backdrop-filter: blur(10px);
@@ -93,19 +94,18 @@
             transition: all 0.5s;
         }
 
-        /* YENİ FONT: Menü linkleriyle aynı (Inter, Büyük Harf) */
         .nav-brand {
             display: flex; align-items: center; gap: 10px;
             text-decoration: none; color: var(--text-color);
             font-family: 'Inter', -apple-system, sans-serif;
             font-size: 0.85rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase;
             transition: opacity 0.3s;
-            z-index: 2; /* Logoyu öne alıyoruz */
+            z-index: 2; 
         }
         .nav-brand:hover { opacity: 0.7; }
         .nav-brand img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
 
-        /* MENÜYÜ KUSURSUZ ORTALA */
+        /* MENÜ KUSURSUZ ORTALAMA */
         .nav-links { 
             position: absolute; left: 50%; transform: translateX(-50%);
             display: flex; gap: 25px; z-index: 1; 
@@ -116,7 +116,7 @@
         }
         .nav-links a:hover { opacity: 0.6; }
 
-        .settings { display: flex; gap: 12px; z-index: 2; /* Butonları öne alıyoruz */ }
+        .settings { display: flex; gap: 12px; z-index: 2; }
         .settings-btn {
             background: transparent; border: none; color: var(--text-color);
             font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500;
@@ -147,17 +147,10 @@
         .card:hover { background-color: transparent; }
         
         .featured-research {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+            display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;
             text-align: left; width: 100%; padding: 20px 0; border-bottom: 1px solid var(--border-color);
         }
         .research-text h3 { margin-bottom: 15px; }
-        
-        .research-img-placeholder {
-            width: 100%; height: 260px; background-color: var(--card-bg);
-            border: 1px dashed var(--border-color); border-radius: 4px;
-            display: flex; justify-content: center; align-items: center;
-            color: var(--text-color); font-size: 0.9rem; opacity: 0.6; overflow: hidden;
-        }
 
         .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 25px; width: 100%; }
         .btn {
@@ -169,14 +162,12 @@
         .btn-solid { background-color: var(--text-color); color: var(--bg-color); border-color: var(--text-color); }
         .btn-solid:hover { background-color: transparent; color: var(--text-color); }
 
-        /* FOOTER */
+        /* FOOTER (Yeni Tasarım) */
         footer {
-            text-align: center;
-            padding: 30px 20px;
+            text-align: left;
+            padding: 25px 30px;
             border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            opacity: 0.75;
-            font-weight: 300;
+            opacity: 0.7;
         }
 
         .hidden { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
@@ -187,7 +178,7 @@
             nav { padding: 12px 15px; flex-wrap: wrap; }
             .nav-brand span { display: inline; } 
             .nav-links { 
-                position: static; transform: none; /* Mobilde ortalamayı sıfırla ki butonlar bozulmasın */
+                position: static; transform: none; 
                 order: 3; width: 100%; display: flex; justify-content: center; 
                 gap: 15px; margin-top: 10px; padding-top: 10px; 
                 border-top: 1px solid var(--border-color); overflow-x: auto;
@@ -199,8 +190,6 @@
             section { padding: 90px 15px 40px 15px; }
             #home { padding-top: 120px; }
             .profile-img { width: 160px; height: 160px; }
-            .featured-research { grid-template-columns: 1fr; gap: 20px; text-align: center; }
-            .research-img-placeholder { height: 200px; }
         }
     </style>
 </head>
@@ -214,7 +203,6 @@
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About Me</a>
-            <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
         </div>
@@ -238,23 +226,8 @@
     <section id="about" class="hidden">
         <h2>About Me</h2>
         <p style="margin: 0 auto; text-align: center;">
-            [Continuing my 4th-year psychology education at Bilkent University, currently focusing on my senior project. ]
+            [Continuing my 4th-year psychology education at Bilkent University, currently focusing on my senior project.]
         </p>
-    </section>
-
-    <!-- 3. RESEARCH -->
-    <section id="research" class="hidden">
-        <h2>Featured Work</h2>
-        <div class="featured-research">
-            <div class="research-text">
-                <h3>Involuntary Memory</h3>
-                <p>Under Construction</p>
-                <p>I will add a section here soon</p>
-                <div class="btn-container" style="justify-content: flex-start; margin-top: 15px;">
-                    <a href="#" class="btn">Read Report</a>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- 4. PUBLICATIONS -->
@@ -280,8 +253,8 @@
 
     <!-- FOOTER -->
     <footer>
-        <p style="margin: 0; font-weight: 400;">&copy; 2026 Cagatay Buyukyumak. All rights reserved.</p>
-        <p style="margin: 6px 0 0 0; font-size: 0.7rem; opacity: 0.4;">Hosted on GitHub Pages</p>
+        <p style="margin: 0; font-size: 0.75rem; font-weight: 400;">&copy; 2026 Cagatay Buyukyumak. All rights reserved.</p>
+        <p style="margin: 4px 0 0 0; font-size: 0.65rem; opacity: 0.5;">Hosted on GitHub Pages</p>
     </footer>
 
     <script>
