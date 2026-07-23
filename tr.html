@@ -8,15 +8,19 @@
     <meta name="description" content="4. Sınıf Psikoloji lisans öğrencisi ve hafıza araştırmacısı Çağatay Büyükyumak'ın akademik portföyü.">
     <meta name="author" content="Çağatay Büyükyumak">
 
+    <!-- SEO & ROBOTS -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://cagataybuyukyumak.github.io/tr.html">
+
     <!-- OPEN GRAPH META TAGS -->
     <meta property="og:title" content="Çağatay Büyükyumak | Psikoloji & Hafıza Araştırmacısı">
     <meta property="og:description" content="Bilkent Üniversitesi Psikoloji bölümü ve bilişsel süreçler üzerine araştırmalar.">
     <meta property="og:url" content="https://cagataybuyukyumak.github.io/tr.html">
     <meta property="og:type" content="website">
 
-    <!-- FAVICON (Geliştirilmiş) -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <!-- FAVICON (Dinamik Geçiş İçin) -->
+    <link id="favicon" rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link id="apple-favicon" rel="apple-touch-icon" href="favicon.png">
 
     <!-- GOOGLE SCHEMA MARKUP -->
     <script type="application/ld+json">
@@ -61,7 +65,12 @@
             --card-bg: rgba(0, 0, 0, 0.02);
         }
 
-        html { scroll-behavior: smooth; }
+        /* Tüm tarayıcılarda kaymayı/titremeyi önleyen katı ayar */
+        html, body { 
+            max-width: 100%; 
+            overflow-x: hidden; 
+            scroll-behavior: smooth; 
+        }
 
         body {
             background-color: var(--bg-color);
@@ -162,7 +171,7 @@
         .btn-solid { background-color: var(--text-color); color: var(--bg-color); border-color: var(--text-color); }
         .btn-solid:hover { background-color: transparent; color: var(--text-color); }
 
-        /* FOOTER (Yeni Tasarım) */
+        /* FOOTER */
         footer {
             text-align: left;
             padding: 25px 30px;
@@ -173,22 +182,22 @@
         .hidden { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
         .show { opacity: 1; transform: translateY(0); }
 
-        /* KUSURSUZ MOBİL UYUM */
-        @media (max-width: 800px) {
-            nav { padding: 12px 15px; flex-wrap: wrap; }
+        /* KUSURSUZ MOBİL UYUM (Sabitlendi) */
+        @media (max-width: 850px) {
+            nav { padding: 15px 20px; flex-wrap: wrap; }
             .nav-brand span { display: inline; } 
             .nav-links { 
-                position: static; transform: none;
-                order: 3; width: 100%; display: flex; justify-content: center; 
-                gap: 15px; margin-top: 10px; padding-top: 10px; 
-                border-top: 1px solid var(--border-color); overflow-x: auto;
+                position: relative; left: 0; transform: none; 
+                order: 3; width: 100%; display: flex; justify-content: center; flex-wrap: wrap; /* Taşmayı önler */
+                gap: 15px; margin-top: 12px; padding-top: 12px; 
+                border-top: 1px solid var(--border-color);
             }
-            .nav-links a { font-size: 0.75rem; white-space: nowrap; }
+            .nav-links a { font-size: 0.75rem; }
             .settings { order: 2; }
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.8rem; }
-            section { padding: 90px 15px 40px 15px; }
-            #home { padding-top: 120px; }
+            section { padding: 130px 20px 40px 20px; } /* Menü büyüdüğü için alan eklendi */
+            #home { padding-top: 150px; }
             .profile-img { width: 160px; height: 160px; }
         }
     </style>
@@ -197,17 +206,18 @@
 
     <nav>
         <a href="#home" class="nav-brand">
-            <img src="favicon.png" alt="Logo">
+            <img id="nav-logo" src="favicon.png" alt="Logo">
             <span>Çağatay Büyükyumak</span>
         </a>
         <div class="nav-links">
             <a href="#home">Ana Sayfa</a>
             <a href="#about">Hakkımda</a>
+            <a href="#research">Araştırmalar</a>
             <a href="#publications">Yayınlar</a>
             <a href="#contact">İletişim</a>
         </div>
         <div class="settings">
-            <button id="theme-btn" class="settings-btn">KOYU</button>
+            <button id="theme-btn" class="settings-btn">AÇIK</button>
             <a href="index.html" class="settings-btn" style="font-weight: 600;">EN</a> 
         </div>
     </nav>
@@ -226,8 +236,20 @@
     <section id="about" class="hidden">
         <h2>Hakkımda</h2>
         <p style="margin: 0 auto; text-align: center;">
-            [Bilkent Üniversitesi Psikoloji bölümünde son sınıfımdayım. Şu anda bitirme projem üzerine çalışıyorum. Kendi websitemi GitHub pages üzerinden oluşturdum ve üzerinde çalışmaya devam ediyorum.]
+            Bilkent Üniversitesi Psikoloji bölümünde son sınıfımdayım. Şu anda bitirme projem üzerine çalışıyorum. Kendi websitemi GitHub pages üzerinden oluşturdum ve üzerinde çalışmaya devam ediyorum.
         </p>
+    </section>
+
+    <!-- 3. RESEARCH -->
+    <section id="research" class="hidden">
+        <h2>Öne Çıkan Çalışmalar</h2>
+        <div class="featured-research">
+            <div class="research-text">
+                <h3>Boşluk</h3>
+                <p><strong>Yayın:</strong> Henüz burayı kodlamadım</p>
+                <p>Yakında</p>
+            </div>
+        </div>
     </section>
 
     <!-- 4. PUBLICATIONS -->
@@ -244,10 +266,10 @@
         <p style="margin: 0 auto; text-align: center;">Akademik işbirlikleri ve araştırma projeleri için iletişim ağım.</p>
         <div class="btn-container">
             <a href="mailto:cagataybuyukyumak@icloud.com" class="btn btn-solid">E-Posta</a>
-            <a href="https://www.linkedin.com/in/cagatay-buyukyumak/" class="btn" target="_blank">LinkedIn</a>
-            <a href="https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf" class="btn" target="_blank">ResearchGate</a>
-            <a href="https://github.com/CagatayBuyukyumak" class="btn" target="_blank">GitHub</a>
-            <a href="https://orcid.org/0009-0001-5976-713X" class="btn" target="_blank">ORCID</a>
+            <a href="https://www.linkedin.com/in/cagatay-buyukyumak/" class="btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf" class="btn" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+            <a href="https://github.com/CagatayBuyukyumak" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://orcid.org/0009-0001-5976-713X" class="btn" target="_blank" rel="noopener noreferrer">ORCID</a>
         </div>
     </section>
 
@@ -268,19 +290,37 @@
         document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
 
         const themeBtn = document.getElementById('theme-btn');
+        const navLogo = document.getElementById('nav-logo');
+        const favicon = document.getElementById('favicon');
+        const appleFavicon = document.getElementById('apple-favicon');
+
         const currentTheme = localStorage.getItem('theme');
         if (currentTheme === 'light') {
             document.body.classList.add('light-mode');
             themeBtn.innerText = 'KOYU';
+            navLogo.src = 'favicon2.png';
+            favicon.href = 'favicon2.png';
+            appleFavicon.href = 'favicon2.png';
+        } else {
+            navLogo.src = 'favicon.png';
+            favicon.href = 'favicon.png';
+            appleFavicon.href = 'favicon.png';
         }
+
         themeBtn.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
             if (document.body.classList.contains('light-mode')) {
                 localStorage.setItem('theme', 'light');
                 themeBtn.innerText = 'KOYU';
+                navLogo.src = 'favicon2.png';
+                favicon.href = 'favicon2.png';
+                appleFavicon.href = 'favicon2.png';
             } else {
                 localStorage.setItem('theme', 'dark');
                 themeBtn.innerText = 'AÇIK';
+                navLogo.src = 'favicon.png';
+                favicon.href = 'favicon.png';
+                appleFavicon.href = 'favicon.png';
             }
         });
     </script>
