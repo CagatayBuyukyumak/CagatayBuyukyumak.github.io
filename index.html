@@ -100,18 +100,23 @@
             font-family: 'Inter', -apple-system, sans-serif;
             font-size: 0.85rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase;
             transition: opacity 0.3s;
+            z-index: 2; /* Logoyu öne alıyoruz */
         }
         .nav-brand:hover { opacity: 0.7; }
         .nav-brand img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
 
-        .nav-links { display: flex; gap: 25px; }
+        /* MENÜYÜ KUSURSUZ ORTALA */
+        .nav-links { 
+            position: absolute; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 25px; z-index: 1; 
+        }
         .nav-links a {
             color: var(--text-color); text-decoration: none; font-weight: 400;
             font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 0.3s;
         }
         .nav-links a:hover { opacity: 0.6; }
 
-        .settings { display: flex; gap: 12px; }
+        .settings { display: flex; gap: 12px; z-index: 2; /* Butonları öne alıyoruz */ }
         .settings-btn {
             background: transparent; border: none; color: var(--text-color);
             font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500;
@@ -178,10 +183,11 @@
         .show { opacity: 1; transform: translateY(0); }
 
         /* KUSURSUZ MOBİL UYUM */
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             nav { padding: 12px 15px; flex-wrap: wrap; }
             .nav-brand span { display: inline; } 
             .nav-links { 
+                position: static; transform: none; /* Mobilde ortalamayı sıfırla ki butonlar bozulmasın */
                 order: 3; width: 100%; display: flex; justify-content: center; 
                 gap: 15px; margin-top: 10px; padding-top: 10px; 
                 border-top: 1px solid var(--border-color); overflow-x: auto;
@@ -228,7 +234,7 @@
         </div>
     </section>
 
-    <!-- 2. ABOUT ME (YENİ EKLENDİ) -->
+    <!-- 2. ABOUT ME -->
     <section id="about" class="hidden">
         <h2>About Me</h2>
         <p style="margin: 0 auto; text-align: center;">
@@ -251,7 +257,7 @@
         </div>
     </section>
 
-    <!-- 4. PUBLICATIONS (YENİ EKLENDİ) -->
+    <!-- 4. PUBLICATIONS -->
     <section id="publications" class="hidden">
         <h2>Publications</h2>
         <div class="card" style="width: 100%; text-align: center; max-width: 750px; margin: 0 auto;">
@@ -272,7 +278,7 @@
         </div>
     </section>
 
-    <!-- FOOTER (COPYRIGHT EKLENDİ) -->
+    <!-- FOOTER -->
     <footer>
         <p style="margin: 0; font-weight: 400;">&copy; 2026 Cagatay Buyukyumak. All rights reserved.</p>
         <p style="margin: 6px 0 0 0; font-size: 0.7rem; opacity: 0.4;">Hosted on GitHub Pages</p>
