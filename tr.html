@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Çağatay Büyükyumak | Psikolog adayı, Araştırmacı</title>
+    <title>Çağatay Büyükyumak | Psikoloji Lisans Öğrencisi</title>
     <meta name="description" content="4. Sınıf Psikoloji lisans öğrencisi ve hafıza araştırmacısı Çağatay Büyükyumak'ın akademik portföyü.">
     <meta name="author" content="Çağatay Büyükyumak">
 
@@ -28,7 +28,7 @@
         "@type": "Organization",
         "name": "Bilkent University"
       },
-      "url": "https://cagataybuyukyumak.github.io/",
+      "url": "https://cagataybuyukyumak.github.io/tr.html",
       "sameAs": [
         "https://www.linkedin.com/in/cagatay-buyukyumak/",
         "https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf",
@@ -93,10 +93,12 @@
             transition: all 0.5s;
         }
 
+        /* YENİ FONT: Menü linkleriyle aynı (Inter, Büyük Harf) */
         .nav-brand {
             display: flex; align-items: center; gap: 10px;
             text-decoration: none; color: var(--text-color);
-            font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 500;
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 0.85rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase;
             transition: opacity 0.3s;
         }
         .nav-brand:hover { opacity: 0.7; }
@@ -133,27 +135,12 @@
         }
         .profile-img:hover { filter: grayscale(0%); transform: scale(1.02); }
 
-        .now-list { width: 100%; max-width: 750px; margin: 0 auto; }
-        .now-list p {
-            font-size: 1.05rem; border-left: 2px solid var(--border-color);
-            padding-left: 20px; margin-bottom: 20px;
-        }
-
-        .grid-container {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px; width: 100%; margin-top: 15px;
-        }
         .card {
             background-color: var(--card-bg); border: 1px solid var(--border-color);
             padding: 25px; text-align: left; border-radius: 4px; transition: background-color 0.3s;
         }
         .card:hover { background-color: transparent; }
-        .card h4 { font-size: 1.2rem; margin: 0 0 10px 0; }
         
-        .skill-list { list-style-type: none; padding: 0; margin: 15px 0 0 0; opacity: 0.85; }
-        .skill-list li { margin-bottom: 8px; position: relative; padding-left: 15px; font-size: 1rem; }
-        .skill-list li::before { content: "—"; position: absolute; left: 0; opacity: 0.5; }
-
         .featured-research {
             display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
             text-align: left; width: 100%; padding: 20px 0; border-bottom: 1px solid var(--border-color);
@@ -193,10 +180,10 @@
         /* KUSURSUZ MOBİL UYUM */
         @media (max-width: 768px) {
             nav { padding: 12px 15px; flex-wrap: wrap; }
-            .nav-brand span { display: inline; }
+            .nav-brand span { display: inline; } 
             .nav-links { 
                 order: 3; width: 100%; display: flex; justify-content: center; 
-                gap: 12px; margin-top: 10px; padding-top: 10px; 
+                gap: 15px; margin-top: 10px; padding-top: 10px; 
                 border-top: 1px solid var(--border-color); overflow-x: auto;
             }
             .nav-links a { font-size: 0.75rem; white-space: nowrap; }
@@ -220,76 +207,59 @@
         </a>
         <div class="nav-links">
             <a href="#home">Ana Sayfa</a>
-            <a href="#now">Güncel</a>
-            <a href="#expertise">Uzmanlık</a>
+            <a href="#about">Hakkımda</a>
             <a href="#research">Araştırmalar</a>
+            <a href="#publications">Yayınlar</a>
             <a href="#contact">İletişim</a>
         </div>
         <div class="settings">
-            <button id="theme-btn" class="settings-btn">AÇIK</button>
+            <button id="theme-btn" class="settings-btn">KOYU</button>
             <a href="index.html" class="settings-btn" style="font-weight: 600;">EN</a> 
         </div>
     </nav>
 
+    <!-- 1. HOME -->
     <section id="home" class="hidden">
         <img src="IMG_0484.jpeg" alt="Çağatay Büyükyumak" class="profile-img">
-        <h1>Bilişsel Süreçler & İnsan Belleği.</h1>
-        <p style="margin: 0 auto;">Çağatay Büyükyumak. 4. Sınıf Psikoloji Lisans Öğrencisi. Klinik Psikolog, araştırmacı olmayı hedefliyorum</p>
+        <h1>Bir psikolog 'scientist-practitioner' olma yolculuğu.</h1>
+        <p style="margin: 0 auto;">Çağatay Büyükyumak. 4. Sınıf Psikoloji Lisans Öğrencisi.</p>
         <div class="btn-container">
             <a href="Ozgecmis.pdf" class="btn btn-solid" download>Özgeçmişi İndir</a>
-            <a href="#now" class="btn">Ne Üzerinde Çalışıyorum?</a>
         </div>
     </section>
 
-    <section id="now" class="hidden">
-        <h2>Şu An Ne Yapıyorum?</h2>
-        <div class="now-list">
-            <p><strong>Lisans Eğitimi:</strong> Bilkent Üniversitesi'nde 4. sınıf psikoloji eğitimime devam ediyor, bitirme projeme odaklanıyorum.</p>
-            <p><strong>Veri Analizi:</strong> Deneysel verileri daha verimli işleyebilmek için istatistiksel analiz yöntemleri ve yazılım (R/Python) becerilerimi geliştiriyorum.</p>
-        </div>
+    <!-- 2. ABOUT ME -->
+    <section id="about" class="hidden">
+        <h2>Hakkımda</h2>
+        <p style="margin: 0 auto; text-align: center;">
+            [Bilkent Üniversitesi Psikoloji bölümünde son sınıfımdayım. Şu anda bitirme projem üzerine çalışıyorum. Kendi websitemi GitHub pages üzerinden oluşturdum ve üzerinde çalışmaya devam ediyorum. ]
+        </p>
     </section>
 
-    <section id="expertise" class="hidden">
-        <h2>Teknik Donanım</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h4>Veri Analizi & İstatistik</h4>
-                <ul class="skill-list">
-                    <li>SPSS (ANOVA, Regresyon)</li>
-                    <li>R (İleri Düzey Analiz)</li>
-                    <li>Python (Temel Veri Manipülasyonu)</li>
-                    <li>HTML (Temel Websitesi Oluşturma)</li>
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h4>Deney Tasarımı</h4>
-                <ul class="skill-list">
-                    <li>PsychoPy</li>
-                    <li>Bilişsel Test Bataryaları</li>
-                    <li>Araştırma Metodolojisi</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
+    <!-- 3. RESEARCH -->
     <section id="research" class="hidden">
-        <h2>Seçilmiş Çalışmalar</h2>
+        <h2>Öne Çıkan Çalışmalar</h2>
         <div class="featured-research">
             <div class="research-text">
-                <h3>Çalışma Belleği ve Bilişsel Yük</h3>
-                <p><strong>Yayın:</strong> Bilkent Psikoloji Laboratuvarı</p>
-                <p>Artan bilişsel yükün çalışma belleği üzerindeki etkilerini analiz ettik. Çalışmada SPSS kullanarak verilerin varyans analizlerini gerçekleştirdim.</p>
+                <h3>Boşluk</h3>
+                <p><strong>Yayın:</strong> Henüz burayı kodlamadım</p>
+                <p>Yakında</p>
                 <div class="btn-container" style="justify-content: flex-start; margin-top: 15px;">
                     <a href="#" class="btn">Raporu Oku</a>
                 </div>
             </div>
-            <div class="research-img-placeholder">
-                [Buraya Analiz Grafiği veya Laboratuvar Fotoğrafı Gelecek]
-            </div>
         </div>
     </section>
 
+    <!-- 4. PUBLICATIONS -->
+    <section id="publications" class="hidden">
+        <h2>Yayınlar</h2>
+        <div class="card" style="width: 100%; text-align: center; max-width: 750px; margin: 0 auto;">
+            <p style="margin: 0; opacity: 0.8;">[Henüz yayınlanan makalem bulunmamaktadır]</p>
+        </div>
+    </section>
+
+    <!-- 5. CONTACT -->
     <section id="contact" class="hidden">
         <h2>Bağlantı Kurun</h2>
         <p style="margin: 0 auto; text-align: center;">Akademik işbirlikleri ve araştırma projeleri için iletişim ağım.</p>
@@ -304,7 +274,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p style="margin: 0; font-weight: 400;">2026 Çağatay Büyükyumak. Tüm hakları saklıdır.</p>
+        <p style="margin: 0; font-weight: 400;">&copy; 2026 Çağatay Büyükyumak. Tüm hakları saklıdır.</p>
         <p style="margin: 6px 0 0 0; font-size: 0.7rem; opacity: 0.4;">GitHub Pages üzerinde barındırılmaktadır</p>
     </footer>
 
