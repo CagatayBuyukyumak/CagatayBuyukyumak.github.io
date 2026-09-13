@@ -1,360 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta name="google-site-verification" content="EIU_SsDoIg0VEO4A_0MmkBIIVWtx6ze6S5sfgaGfio4" />
-    
-    <link rel="alternate" hreflang="en" href="https://cagataybuyukyumak.github.io/index.html" />
-    <link rel="alternate" hreflang="tr" href="https://cagataybuyukyumak.github.io/tr.html" />
-    <link rel="alternate" hreflang="x-default" href="https://cagataybuyukyumak.github.io/index.html" />
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cagatay Buyukyumak | Psychology Undergraduate & Memory Researcher</title>
-    <!-- SEO: Daha güçlü bir açıklama eklendi -->
-    <meta name="description" content="Official academic portfolio of Cagatay Buyukyumak, a senior Psychology undergraduate at Bilkent University specializing in cognitive science, involuntary memory, and data analysis.">
-    <meta name="keywords" content="Cagatay Buyukyumak, Psychology, Bilkent University, Memory Researcher, False Memory, Cognitive Science, JASP, R, Python, Data Analysis">
-    <meta name="author" content="Cagatay Buyukyumak">
-
-    <!-- SEO & ROBOTS -->
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://cagataybuyukyumak.github.io/">
-
-    <!-- OPEN GRAPH META TAGS (Sosyal medya paylaşımları için) -->
-    <meta property="og:title" content="Cagatay Buyukyumak | Psychology & Memory Researcher">
-    <meta property="og:description" content="Bilkent University Psychology undergraduate and cognitive researcher portfolio.">
-    <meta property="og:url" content="https://cagataybuyukyumak.github.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="IMG_0484.jpeg">
-
-    <!-- FAVICON -->
-    <link id="favicon" rel="icon" type="image/png" sizes="32x32" href="favicon2.png">
-    <link id="apple-favicon" rel="apple-touch-icon" href="favicon2.png">
-
-    <!-- GOOGLE SCHEMA MARKUP (Arama motorlarında bilgi paneli çıkması için) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Cagatay Buyukyumak",
-      "jobTitle": "Memory Researcher & Senior Psychology Undergraduate",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "Bilkent University"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Jagiellonian University"
-      },
-      "url": "https://cagataybuyukyumak.github.io/",
-      "sameAs": [
-        "https://www.linkedin.com/in/cagatay-buyukyumak/",
-        "https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf",
-        "https://github.com/CagatayBuyukyumak",
-        "https://orcid.org/0009-0001-5976-713X"
-      ]
-    }
-    </script>
-
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --bg-color: #2b2d31; 
-            --text-color: #e8e8e6; 
-            --nav-bg: rgba(43, 45, 49, 0.95);
-            --border-color: #4a4d54; 
-            --card-bg: rgba(255, 255, 255, 0.03);
-        }
-
-        .light-mode {
-            --bg-color: #f4f4f2; 
-            --text-color: #2b2d31; 
-            --nav-bg: rgba(244, 244, 242, 0.95);
-            --border-color: #d1d1cf;
-            --card-bg: rgba(0, 0, 0, 0.03);
-        }
-
-        html, body { 
-            max-width: 100%; 
-            overflow-x: hidden; 
-            scroll-behavior: smooth; 
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0; padding: 0; 
-            line-height: 1.75;
-            font-family: 'Inter', -apple-system, sans-serif; 
-            transition: background-color 0.6s ease, color 0.6s ease; 
-        }
-
-        h1, h2, h3, h4 { 
-            font-family: 'Lora', serif; 
-            margin: 0; 
-            color: var(--text-color); 
-            font-weight: 500;
-        }
-        
-        h1 { font-size: 3.5rem; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em; }
-        h2 { font-size: 2.2rem; margin-bottom: 40px; opacity: 0.9; text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
-        h3 { font-size: 1.5rem; margin-bottom: 10px; }
-
-        p { font-size: 1.05rem; font-weight: 300; opacity: 0.85; margin-bottom: 25px; }
-        strong { font-weight: 500; opacity: 1; color: var(--text-color); }
-
-        /* ERİŞİLEBİLİRLİK (A11Y) */
-        a:focus, button:focus {
-            outline: 2px dashed var(--text-color);
-            outline-offset: 4px;
-            border-radius: 2px;
-        }
-
-        /* NAVBAR */
-        nav {
-            position: fixed; top: 0; width: 100%;
-            background-color: var(--nav-bg); backdrop-filter: blur(10px);
-            padding: 15px 30px; display: flex; justify-content: space-between; align-items: center;
-            z-index: 1000; box-sizing: border-box; border-bottom: 1px solid var(--border-color);
-            transition: all 0.5s;
-        }
-
-        .nav-brand {
-            display: flex; align-items: center; gap: 10px;
-            text-decoration: none; color: var(--text-color);
-            font-family: 'Inter', -apple-system, sans-serif;
-            font-size: 0.85rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase;
-            transition: opacity 0.3s;
-            z-index: 2; 
-        }
-        .nav-brand:hover { opacity: 0.7; }
-        .nav-brand img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
-
-        .nav-links { 
-            position: absolute; left: 50%; transform: translateX(-50%);
-            display: flex; gap: 25px; z-index: 1; 
-        }
-        .nav-links a {
-            color: var(--text-color); text-decoration: none; font-weight: 400;
-            font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 0.3s;
-        }
-        .nav-links a:hover { opacity: 0.6; }
-
-        .settings { display: flex; gap: 12px; z-index: 2; }
-        .settings-btn {
-            background: transparent; border: none; color: var(--text-color);
-            font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500;
-            cursor: pointer; transition: opacity 0.3s; text-decoration: none; padding: 0;
-        }
-        .settings-btn:hover { opacity: 0.6; }
-
-        /* SECTIONS */
-        section {
-            min-height: auto; display: flex; flex-direction: column; justify-content: center;
-            align-items: center; padding: 100px 20px 80px 20px; max-width: 900px; 
-            margin: 0 auto; text-align: left; box-sizing: border-box; width: 100%;
-        }
-        
-        #home { text-align: center; padding-top: 140px; }
-
-        .profile-img {
-            width: 220px; height: 220px; border-radius: 50%; object-fit: cover;
-            margin-bottom: 25px; border: 1px solid var(--border-color);
-            filter: grayscale(100%); transition: all 0.5s ease;
-        }
-        .profile-img:hover { filter: grayscale(0%); transform: scale(1.02); }
-
-        .text-container { width: 100%; max-width: 800px; }
-
-        .card {
-            background-color: var(--card-bg); border: 1px solid var(--border-color);
-            padding: 35px; text-align: left; border-radius: 4px; transition: background-color 0.3s;
-            width: 100%; box-sizing: border-box;
-        }
-        .card:hover { background-color: transparent; }
-        
-        .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 25px; width: 100%; }
-        .btn {
-            display: inline-block; padding: 10px 25px; background-color: transparent;
-            border: 1px solid var(--border-color); color: var(--text-color); 
-            text-decoration: none; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.05em; transition: all 0.3s ease;
-        }
-        .btn:hover { background-color: var(--text-color); color: var(--bg-color); }
-        .btn-solid { background-color: var(--text-color); color: var(--bg-color); border-color: var(--text-color); }
-        .btn-solid:hover { background-color: transparent; color: var(--text-color); }
-
-        /* FOOTER */
-        footer {
-            text-align: left;
-            padding: 25px 30px;
-            border-top: 1px solid var(--border-color);
-            opacity: 0.7;
-        }
-
-        .hidden { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
-        .show { opacity: 1; transform: translateY(0); }
-
-        /* MOBİL UYUM */
-        @media (max-width: 850px) {
-            nav { padding: 15px 20px; flex-wrap: wrap; }
-            .nav-brand span { display: inline; } 
-            .nav-links { 
-                position: relative; left: 0; transform: none; 
-                order: 3; width: 100%; display: flex; justify-content: center; flex-wrap: wrap; 
-                gap: 15px; margin-top: 12px; padding-top: 12px; 
-                border-top: 1px solid var(--border-color);
-            }
-            .nav-links a { font-size: 0.75rem; }
-            .settings { order: 2; }
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.8rem; }
-            section { padding: 110px 20px 50px 20px; } 
-            #home { padding-top: 140px; }
-            .profile-img { width: 160px; height: 160px; }
-            .card { padding: 25px 20px; }
-        }
-    </style>
+<meta name="google-site-verification" content="EIU_SsDoIg0VEO4A_0MmkBIIVWtx6ze6S5sfgaGfio4" />
+<link rel="alternate" hreflang="en" href="https://cagataybuyukyumak.github.io/index.html" />
+<link rel="alternate" hreflang="tr" href="https://cagataybuyukyumak.github.io/tr.html" />
+<link rel="alternate" hreflang="x-default" href="https://cagataybuyukyumak.github.io/index.html" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cagatay Buyukyumak | Psychology Undergraduate & Memory Researcher</title>
+<!-- SEO: Daha güçlü bir açıklama eklendi -->
+<meta name="description" content="Official academic portfolio of Cagatay Buyukyumak, a senior Psychology undergraduate at Bilkent University specializing in cognitive science, involuntary memory, and data analysis.">
+<meta name="keywords" content="Cagatay Buyukyumak, Cagatay, Buyukyumak, Psychology, Bilkent University, Memory Researcher, False Memory, Cognitive Science, JASP, R, Python, Data Analysis">
+<meta name="author" content="Cagatay Buyukyumak">
+<!-- SEO & ROBOTS -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://cagataybuyukyumak.github.io/">
+<!-- OPEN GRAPH META TAGS (Sosyal medya paylaşımları için) -->
+<meta property="og:title" content="Cagatay Buyukyumak | Psychology & Memory Researcher">
+<meta property="og:description" content="Bilkent University Psychology undergraduate and cognitive researcher portfolio.">
+<meta property="og:url" content="https://cagataybuyukyumak.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cagataybuyukyumak.github.io/IMG_0484.jpeg">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<!-- FAVICON -->
+<link id="favicon" rel="icon" type="image/png" sizes="32x32" href="favicon2.png">
+<link id="apple-favicon" rel="apple-touch-icon" href="favicon2.png">
+<!-- GOOGLE SCHEMA MARKUP (Arama motorlarında bilgi paneli çıkması için) -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Person",
+"name": "Cagatay Buyukyumak",
+"alternateName": "Çağatay Büyükyumak",
+"jobTitle": "Memory Researcher & Senior Psychology Undergraduate",
+"affiliation": {
+"@type": "Organization",
+"name": "Bilkent University"
+},
+"alumniOf": {
+"@type": "CollegeOrUniversity",
+"name": "Jagiellonian University"
+},
+"url": "https://cagataybuyukyumak.github.io/",
+"sameAs": [
+"https://www.linkedin.com/in/cagatay-buyukyumak/",
+"https://www.researchgate.net/profile/Cagatay-Buyukyumak",
+"https://github.com/CagatayBuyukyumak",
+"https://orcid.org/0009-0001-5976-713X",
+"https://scholar.google.com/citations?user=I1ten98AAAAJ&hl=en"
+]
+}
+</script>
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg-color: #2b2d31;
+--text-color: #e8e8e6;
+--nav-bg: rgba(43, 45, 49, 0.95);
+--border-color: #4a4d54;
+--card-bg: rgba(255, 255, 255, 0.03);
+}
+.light-mode {
+--bg-color: #f4f4f2;
+--text-color: #2b2d31;
+--nav-bg: rgba(244, 244, 242, 0.95);
+--border-color: #d1d1cf;
+--card-bg: rgba(0, 0, 0, 0.03);
+}
+html, body {
+max-width: 100%;
+overflow-x: hidden;
+scroll-behavior: smooth;
+}
+body {
+background-color: var(--bg-color);
+color: var(--text-color);
+margin: 0; padding: 0;
+line-height: 1.75;
+font-family: 'Inter', -apple-system, sans-serif;
+transition: background-color 0.6s ease, color 0.6s ease;
+}
+h1, h2, h3, h4 {
+font-family: 'Lora', serif;
+margin: 0;
+color: var(--text-color);
+font-weight: 500;
+}
+h1 { font-size: 3.5rem; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em; }
+h2 { font-size: 2.2rem; margin-bottom: 40px; opacity: 0.9; text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+h3 { font-size: 1.5rem; margin-bottom: 10px; }
+p { font-size: 1.05rem; font-weight: 300; opacity: 0.85; margin-bottom: 25px; }
+strong { font-weight: 500; opacity: 1; color: var(--text-color); }
+/* ERİŞİLEBİLİRLİK (A11Y) */
+a:focus, button:focus {
+outline: 2px dashed var(--text-color);
+outline-offset: 4px;
+border-radius: 2px;
+}
+/* NAVBAR */
+nav {
+position: fixed; top: 0; width: 100%;
+background-color: var(--nav-bg); backdrop-filter: blur(10px);
+padding: 15px 30px; display: flex; justify-content: space-between; align-items: center;
+z-index: 1000; box-sizing: border-box; border-bottom: 1px solid var(--border-color);
+transition: all 0.5s;
+}
+.nav-brand {
+display: flex; align-items: center; gap: 10px;
+text-decoration: none; color: var(--text-color);
+font-family: 'Inter', -apple-system, sans-serif;
+font-size: 0.85rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase;
+transition: opacity 0.3s;
+z-index: 2;
+}
+.nav-brand:hover { opacity: 0.7; }
+.nav-brand img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
+.nav-links {
+position: absolute; left: 50%; transform: translateX(-50%);
+display: flex; gap: 25px; z-index: 1;
+}
+.nav-links a {
+color: var(--text-color); text-decoration: none; font-weight: 400;
+font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 0.3s;
+}
+.nav-links a:hover { opacity: 0.6; }
+.settings { display: flex; gap: 12px; z-index: 2; }
+.settings-btn {
+background: transparent; border: none; color: var(--text-color);
+font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500;
+cursor: pointer; transition: opacity 0.3s; text-decoration: none; padding: 0;
+}
+.settings-btn:hover { opacity: 0.6; }
+/* SECTIONS */
+section {
+min-height: auto; display: flex; flex-direction: column; justify-content: center;
+align-items: center; padding: 100px 20px 80px 20px; max-width: 900px;
+margin: 0 auto; text-align: left; box-sizing: border-box; width: 100%;
+}
+#home { text-align: center; padding-top: 140px; }
+.profile-img {
+width: 220px; height: 220px; border-radius: 50%; object-fit: cover;
+margin-bottom: 25px; border: 1px solid var(--border-color);
+filter: grayscale(100%); transition: all 0.5s ease;
+}
+.profile-img:hover { filter: grayscale(0%); transform: scale(1.02); }
+.text-container { width: 100%; max-width: 800px; }
+.card {
+background-color: var(--card-bg); border: 1px solid var(--border-color);
+padding: 35px; text-align: left; border-radius: 4px; transition: background-color 0.3s;
+width: 100%; box-sizing: border-box;
+}
+.card:hover { background-color: transparent; }
+.btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 25px; width: 100%; }
+.btn {
+display: inline-block; padding: 10px 25px; background-color: transparent;
+border: 1px solid var(--border-color); color: var(--text-color);
+text-decoration: none; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.05em; transition: all 0.3s ease;
+}
+.btn:hover { background-color: var(--text-color); color: var(--bg-color); }
+.btn-solid { background-color: var(--text-color); color: var(--bg-color); border-color: var(--text-color); }
+.btn-solid:hover { background-color: transparent; color: var(--text-color); }
+/* FOOTER */
+footer {
+text-align: left;
+padding: 25px 30px;
+border-top: 1px solid var(--border-color);
+opacity: 0.7;
+}
+.hidden { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
+.show { opacity: 1; transform: translateY(0); }
+/* MOBİL UYUM */
+@media (max-width: 850px) {
+nav { padding: 15px 20px; flex-wrap: wrap; }
+.nav-brand span { display: inline; }
+.nav-links {
+position: relative; left: 0; transform: none;
+order: 3; width: 100%; display: flex; justify-content: center; flex-wrap: wrap;
+gap: 15px; margin-top: 12px; padding-top: 12px;
+border-top: 1px solid var(--border-color);
+}
+.nav-links a { font-size: 0.75rem; }
+.settings { order: 2; }
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+section { padding: 110px 20px 50px 20px; }
+#home { padding-top: 140px; }
+.profile-img { width: 160px; height: 160px; }
+.card { padding: 25px 20px; }
+}
+</style>
 </head>
 <body>
+<nav aria-label="Main Navigation">
+<a href="#home" class="nav-brand" aria-label="Cagatay Buyukyumak Homepage">
+<img id="nav-logo" src="favicon2.png" alt="Personal Logo of Cagatay Buyukyumak">
+<span>Cagatay Buyukyumak</span>
+</a>
+<div class="nav-links" role="menubar">
+<a href="#home" role="menuitem">Home</a>
+<a href="#about" role="menuitem">About Me</a>
+<a href="#research" role="menuitem">Research</a>
+<a href="#publications" role="menuitem">Publications</a>
+<a href="#contact" role="menuitem">Contact</a>
+</div>
+<div class="settings">
+<button id="theme-btn" class="settings-btn" aria-label="Toggle dark and light theme">LIGHT</button>
+<a href="tr.html" class="settings-btn" style="font-weight: 600;" aria-label="Switch to Turkish Language">TR</a>
+</div>
+</nav>
 
-    <nav aria-label="Main Navigation">
-        <a href="#home" class="nav-brand" aria-label="Cagatay Buyukyumak Homepage">
-            <img id="nav-logo" src="favicon2.png" alt="Personal Logo of Cagatay Buyukyumak">
-            <span>Cagatay Buyukyumak</span>
-        </a>
-        <div class="nav-links" role="menubar">
-            <a href="#home" role="menuitem">Home</a>
-            <a href="#about" role="menuitem">About Me</a>
-            <a href="#research" role="menuitem">Research</a>
-            <a href="#publications" role="menuitem">Publications</a>
-            <a href="#contact" role="menuitem">Contact</a>
-        </div>
-        <div class="settings">
-            <button id="theme-btn" class="settings-btn" aria-label="Toggle dark and light theme">LIGHT</button>
-            <a href="tr.html" class="settings-btn" style="font-weight: 600;" aria-label="Switch to Turkish Language">TR</a> 
-        </div>
-    </nav>
+<!-- 1. HOME -->
+<section id="home" class="hidden">
+<img src="IMG_0484.jpeg" alt="Portrait photo of Cagatay Buyukyumak, Psychology Undergraduate" class="profile-img">
+<h1>Hi, I am Çağatay.</h1>
+<p style="text-align: center;">Senior Psychology Student at Bilkent University, Researcher</p>
+<div class="btn-container">
+<a href="CV.pdf" class="btn btn-solid" download aria-label="Download Curriculum Vitae as PDF">CV</a>
+</div>
+</section>
 
-    <!-- 1. HOME -->
-    <section id="home" class="hidden">
-        <img src="IMG_0484.jpeg" alt="Portrait photo of Cagatay Buyukyumak, Psychology Undergraduate" class="profile-img">
-        <h1>Hi, I am Çağatay.</h1>
-        <p style="text-align: center;">Senior Psychology Student at Bilkent University, Researcher</p>
-        <div class="btn-container">
-            <a href="CV.pdf" class="btn btn-solid" download aria-label="Download Curriculum Vitae as PDF">CV</a>
-        </div>
-    </section>
+<!-- 2. ABOUT ME -->
+<section id="about" class="hidden">
+<div class="text-container">
+<h2>About Me</h2>
+<div class="card">
+<p>I am a senior psychology student at Bilkent University. I am mainly interested in how human memory works, especially false memory, collective memory, and involuntary memory.</p>
+<p>Over the past few years, I have spent a lot of time in the lab. At Bilkent's Real-World Cognition and Multimodal Language labs, I learned how to design experiments and analyze data using R, Python, JASP, and SPSS. Recently, I also completed a summer internship at the Applied Memory Research Lab at Jagiellonian University in Poland. There, I set up Qualtrics experiments, reviewed literature on involuntary memory, and translated psychological scales into Turkish.</p>
+<p>Outside of academic research, I worked as a Project Assistant at Eşit Nesiller Derneği for an EU-funded project. This role taught me a lot about project management, budget tracking, and practical data analysis in real-world settings. I have also enjoyed working as a Teaching Assistant for introductory data analysis courses at my university.</p>
+<p>Alongside my research work, I completed a clinical internship in the Department of Psychiatry at Hacettepe University Hospital. There I observed clinical interviews in outpatient and inpatient units, watched psychological assessments such as the MMPI, WISC, and neuropsychological batteries being administered, and attended case conferences.</p>
+<p style="margin-bottom: 0;">Right now, I am focusing on my senior thesis.</p>
+</div>
+</div>
+</section>
 
-    <!-- 2. ABOUT ME -->
-    <section id="about" class="hidden">
-        <div class="text-container">
-            <h2>About Me</h2>
-            <div class="card">
-                <p>I am a senior psychology student at Bilkent University. I am mainly interested in how human memory works, especially false memory, collective memory, and involuntary memory.</p>
-                
-                <p>Over the past few years, I have spent a lot of time in the lab. At Bilkent’s Real-World Cognition and Multimodal Language labs, I learned how to design experiments and analyze data using R, Python, JASP, and SPSS. Recently, I also completed a summer internship at the Applied Memory Research Lab at Jagiellonian University in Poland. There, I set up Qualtrics experiments, reviewed literature on involuntary memory, and translated psychological scales into Turkish.</p>
-                
-                <p>Outside of academic research, I worked as a Project Assistant at Eşit Nesiller Derneği for an EU-funded project. This role taught me a lot about project management, budget tracking, and practical data analysis in real-world settings. I have also enjoyed working as a Teaching Assistant for introductory data analysis courses at my university.</p>
-                
-                <p> Alongside my research work, I completed a clinical internship in the Department of Psychiatry at Hacettepe University Hospital. There I observed clinical interviews in outpatient and inpatient units, watched psychological assessments such as the MMPI, WISC, and neuropsychological batteries being administered, and attended case conferences.</p>
-                
-                <p style="margin-bottom: 0;">Right now, I am focusing on my senior thesis.</p>
-            </div>
-        </div>
-    </section>
+<!-- 3. RESEARCH -->
+<section id="research" class="hidden">
+<div class="text-container">
+<h2>Research Interests</h2>
+<div class="card">
+<h3 style="margin-top: 0;">Involuntary Memory</h3>
+<h3 style="margin-top: 0;">Forensic Psychology</h3>
+<h3 style="margin-top: 0;">Clinical Psychology</h3>
+</div>
+</div>
+</section>
 
-    <!-- 3. RESEARCH -->
-    <section id="research" class="hidden">
-        <div class="text-container">
-            <h2>Research Interests</h2>
-            <div class="card">
-                <h3 style="margin-top: 0;">Involuntary Memory</h3>
-                <h3 style="margin-top: 0;">Forensic Psychology</h3>
-                <h3 style="margin-top: 0;">Clinical Psychology</h3>
-            </div>
-        </div>
-    </section>
+<!-- 4. PUBLICATIONS -->
+<section id="publications" class="hidden">
+<div class="text-container">
+<h2>Publications and Ongoing Research</h2>
+<div class="card">
+<p style="margin: 0; opacity: 0.8; text-align: center;">Translation and Adaptation of the IAMI and MSS Scales into Turkish (In Progress).</p>
+</div>
+</div>
+</section>
 
-    <!-- 4. PUBLICATIONS -->
-    <section id="publications" class="hidden">
-        <div class="text-container">
-            <h2>Publications and Ongoing Research</h2>
-            <div class="card">
-                <p style="margin: 0; opacity: 0.8; text-align: center;"> Translation and Adaptation of the IAMI and MSS Scales into Turkish (In Progress).  </p>
-            </div>
-        </div>
-    </section>
+<!-- 5. CONTACT -->
+<section id="contact" class="hidden">
+<div class="text-container" style="text-align: center;">
+<h2>Connect With Me</h2>
+<p>My communication network for academic collaborations and research projects.</p>
+<div class="btn-container">
+<a href="mailto:cagataybuyukyumak@icloud.com" class="btn" aria-label="Send an email to Cagatay">Email</a>
+<a href="https://www.linkedin.com/in/cagatay-buyukyumak/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn Profile">LinkedIn</a>
+<a href="https://www.researchgate.net/profile/Cagatay-Buyukyumak" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit ResearchGate Profile">ResearchGate</a>
+<a href="https://github.com/CagatayBuyukyumak" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile">GitHub</a>
+<a href="https://scholar.google.com/citations?user=I1ten98AAAAJ&hl=en" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit Google Scholar Profile">Google Scholar</a>
+<a href="https://orcid.org/0009-0001-5976-713X" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit ORCID Profile">ORCID</a>
+</div>
+</div>
+</section>
 
-    <!-- 5. CONTACT -->
-    <section id="contact" class="hidden">
-        <div class="text-container" style="text-align: center;">
-            <h2>Connect With Me</h2>
-            <p>My communication network for academic collaborations and research projects.</p>
-            <div class="btn-container">
-                <a href="mailto:cagataybuyukyumak@icloud.com" class="btn btn" aria-label="Send an email to Cagatay">Email</a>
-                <a href="https://www.linkedin.com/in/cagatay-buyukyumak/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn Profile">LinkedIn</a>
-                <a href="https://www.researchgate.net/profile/Cagatay-Buyukyumak?ev=hdr_xprf" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit ResearchGate Profile">ResearchGate</a>
-                <a href="https://github.com/CagatayBuyukyumak" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile">GitHub</a>
-                <a href=https://scholar.google.com.tr/citations?user=I1ten98AAAAJ&hl=en class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit Google Scholar Profile">Google Scholar</a>
-                <a href="https://orcid.org/0009-0001-5976-713X" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit ORCID Profile">ORCID</a>
-            </div>
-        </div>
-    </section>
+<!-- FOOTER -->
+<footer>
+<p style="margin: 0; font-size: 0.75rem; font-weight: 400;">&copy; 2026 Cagatay Buyukyumak. All rights reserved.</p>
+<p style="margin: 4px 0 0 0; font-size: 0.65rem; opacity: 0.5;">Hosted on GitHub Pages</p>
+</footer>
 
-    <!-- FOOTER -->
-    <footer>
-        <p style="margin: 0; font-size: 0.75rem; font-weight: 400;">&copy; 2026 Cagatay Buyukyumak. All rights reserved.</p>
-        <p style="margin: 4px 0 0 0; font-size: 0.65rem; opacity: 0.5;">Hosted on GitHub Pages</p>
-    </footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+if (entry.isIntersecting) {
+entry.target.classList.add('show');
+}
+});
+});
+document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        });
-        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
+const themeBtn = document.getElementById('theme-btn');
+const navLogo = document.getElementById('nav-logo');
+const favicon = document.getElementById('favicon');
+const appleFavicon = document.getElementById('apple-favicon');
+const currentTheme = localStorage.getItem('theme');
 
-        const themeBtn = document.getElementById('theme-btn');
-        const navLogo = document.getElementById('nav-logo');
-        const favicon = document.getElementById('favicon');
-        const appleFavicon = document.getElementById('apple-favicon');
+if (currentTheme === 'light') {
+document.body.classList.add('light-mode');
+themeBtn.innerText = 'DARK';
+navLogo.src = 'favicon.png';
+favicon.href = 'favicon.png';
+appleFavicon.href = 'favicon.png';
+} else {
+navLogo.src = 'favicon2.png';
+favicon.href = 'favicon2.png';
+appleFavicon.href = 'favicon2.png';
+}
 
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'light') {
-            document.body.classList.add('light-mode');
-            themeBtn.innerText = 'DARK';
-            navLogo.src = 'favicon.png';
-            favicon.href = 'favicon.png';
-            appleFavicon.href = 'favicon.png';
-        } else {
-            navLogo.src = 'favicon2.png';
-            favicon.href = 'favicon2.png';
-            appleFavicon.href = 'favicon2.png';
-        }
-
-        themeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            if (document.body.classList.contains('light-mode')) {
-                localStorage.setItem('theme', 'light');
-                themeBtn.innerText = 'DARK';
-                navLogo.src = 'favicon.png';
-                favicon.href = 'favicon.png';
-                appleFavicon.href = 'favicon.png';
-            } else {
-                localStorage.setItem('theme', 'dark');
-                themeBtn.innerText = 'LIGHT';
-                navLogo.src = 'favicon2.png';
-                favicon.href = 'favicon2.png';
-                appleFavicon.href = 'favicon2.png';
-            }
-        });
-    </script>
+themeBtn.addEventListener('click', () => {
+document.body.classList.toggle('light-mode');
+if (document.body.classList.contains('light-mode')) {
+localStorage.setItem('theme', 'light');
+themeBtn.innerText = 'DARK';
+navLogo.src = 'favicon.png';
+favicon.href = 'favicon.png';
+appleFavicon.href = 'favicon.png';
+} else {
+localStorage.setItem('theme', 'dark');
+themeBtn.innerText = 'LIGHT';
+navLogo.src = 'favicon2.png';
+favicon.href = 'favicon2.png';
+appleFavicon.href = 'favicon2.png';
+}
+});
+</script>
 </body>
 </html>
